@@ -1,0 +1,158 @@
+.jumbotron {
+    position: relative;
+    background-image: url("/assets/img/photo.JPG"); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    padding: 160px 20px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* flou + assombrissement */
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    filter: blur(3px) brightness(0.7);
+    z-index: 0;
+}
+
+/* le contenu passe au-dessus du flou */
+.jumbotron > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* titre principal */
+
+
+.jumbotron h1 {
+    font-family: 'Baloo 2', cursive;
+    font-size: 5rem;
+    font-weight: 700;
+    color: #fefefe;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.9);
+    margin-bottom: 20px;
+    transition: all 0.4s ease-in-out;
+}
+
+/* sous-titre */
+.jumbotron p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+/* Animation du fond (léger mouvement vertical) */
+.jumbotron {
+    animation: backgroundScroll 30s linear infinite;
+    background-attachment: fixed;
+}
+
+@keyframes backgroundScroll {
+    0% { background-position: center 0; }
+    100% { background-position: center 100px; }
+}
+
+/* Effet de survol sur le titre */
+.jumbotron h1:hover {
+    transform: scale(1.08);
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.9);
+    transition: all 0.4s ease-in-out;
+}
+
+/* Animation lettre par lettre pour le sous-titre */
+.typing-animation span {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid rgba(255,255,255,0.75);
+    animation: typing 4s steps(50, end) forwards, blink 0.75s step-end infinite;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.6);
+    max-width: 100%;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Effet dynamique au survol des images */
+.neighborhood-guides img {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.neighborhood-guides img:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+
+
+/* Style de la section Neighborhood Guides */
+.neighborhood-guides {
+    background-color: #efefef;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 40px 0;
+}
+
+.neighborhood-guides h2 {
+    color: #393c3d;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.neighborhood-guides p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+/* Style des images */
+.neighborhood-guides img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Style des sections de Travel ,Host et Trust  on va les rendre apres comme une place pour publier events */
+.container .row h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.container .row p {
+    font-size: 14px;
+    color: #666;
+}
+
+.container .row a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.container .row a:hover {
+    text-decoration: underline;
+}
+

@@ -1,0 +1,30 @@
+/* Pour les petits écrans */
+@media (max-width: 576px) {
+    .card {
+      margin: 0 10px;
+    }
+  }
+  
+  /* Pour les tablettes */
+  @media (min-width: 577px) and (max-width: 768px) {
+    .col-md-6 {
+      flex: 0 0 80%;
+      max-width: 80%;
+    }
+  }
+  
+  /* Pour les écrans moyens */
+  @media (min-width: 769px) and (max-width: 992px) {
+    .col-md-6 {
+      flex: 0 0 70%;
+      max-width: 70%;
+    }
+  }
+  
+  /* Pour les grands écrans */
+  @media (min-width: 993px) {
+    .col-md-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }

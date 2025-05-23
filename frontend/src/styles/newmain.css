@@ -1,0 +1,132 @@
+/* Layout général */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #sidebarOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 900;
+  }
+  
+  #sidebarOverlay.active {
+    display: block; /* Assurez-vous que l'overlay s'affiche quand il est actif */
+  }
+  
+  /* Sidebar */
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    background: #2c3e50;
+    color: white;
+    position: fixed;
+    left: 0; /* Par défaut, la sidebar est visible sur desktop */
+    top: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto; /* Permet le défilement si le contenu est trop long */
+  }
+  
+  .sidebar.collapsed {
+    width: 70px;
+  }
+  
+  .side-menu {
+    list-style: none;
+    padding: 20px 0;
+    margin: 0;
+  }
+  
+  .side-menu li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+  
+  .side-menu li a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+  }
+  
+  .side-menu li a i {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    min-width: 24px;
+  }
+  
+  .side-menu li a span {
+    white-space: nowrap;
+  }
+  
+  .sidebar.collapsed .side-menu li a span {
+    display: none;
+  }
+  
+  .side-menu li a.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  /* Contenu principal */
+  .content {
+    margin-left: 250px;
+    transition: all 0.3s ease;
+    min-height: 100vh;
+  }
+  
+  .content.collapsed {
+    margin-left: 70px;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background: white;
+    padding: 15px 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .user-profile {
+    font-weight: bold; 
+    margin-right: 20px;
+    font-size: 16px;
+  }
+  
+  .user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  /* Version mobile */
+  @media (max-width: 768px) {
+    .sidebar {
+      left: -250px; /* Caché par défaut sur mobile */
+    }
+    
+    .sidebar.active {
+      left: 0; /* Montré quand actif sur mobile */
+    }
+    
+    .content {
+      margin-left: 0;
+    }
+    
+    .content.collapsed {
+      margin-left: 0;
+    }
+  }
