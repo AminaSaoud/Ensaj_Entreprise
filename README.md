@@ -1,6 +1,6 @@
 # SiteENSAJEntreprises
 
-**Site web officiel du club EnsajEntreprises**, conçu pour faciliter la gestion des événements, des membres et des statistiques du club.
+**Site web officiel du club ENSAJ Entreprises**, conçu pour faciliter la gestion des événements, des membres et des statistiques du club.
 
 Cette plateforme propose deux espaces distincts : un pour les **administrateurs** et un autre pour les **adhérents**.
 
