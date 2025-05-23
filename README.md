@@ -47,19 +47,23 @@ Cette plateforme propose deux espaces distincts : un pour les **administrateurs*
 - date-fns  
 
 ---
-
 ## Installation de l’environnement
 
-1. Cloner le projet :
+1. **Cloner le projet :**
 
+```bash
 git clone <URL_DU_DEPOT>
 cd SiteEnsajEntreprises
 
 2. Installer Laravel dans le dossier Backend :
 
+
+
 composer create-project laravel/laravel Backend
 
 3. Installer les dépendances React :
+
+
 
 npm install
 npm install bootstrap react-bootstrap
@@ -67,36 +71,47 @@ npm install recharts chart.js react-chartjs-2 jspdf jspdf-autotable xlsx date-fn
 
 4. Configuration Laravel :
 
-Copier le fichier .env.example en .env  
-Configurer les variables de base de données dans .env  
+
+
+Copier le fichier .env.example en .env
+Configurer les variables de base de données dans .env
 Générer la clé d'application :
 
 php artisan key:generate
 
 5. Migrer la base de données :
 
+
+
 php artisan migrate
 
 6. Créer le lien vers le stockage (pour les fichiers d'événements) :
+
+
 
 php artisan storage:link
 
 7. Optimiser ou vider le cache si nécessaire :
 
-php artisan optimize  
-php artisan route:clear  
-php artisan config:clear  
-php artisan cache:clear  
+
+
+php artisan optimize
+php artisan route:clear
+php artisan config:clear
+php artisan cache:clear
 php artisan view:clear
 
 8. Utilitaire Laravel Tinker :
+
+
 
 php artisan tinker
 
 Pour créer des utilisateurs ou générer un mot de passe crypté.
 
+
 ---
 
-## Contribution
+Contribution
 
 Toute contribution est la bienvenue. Merci de bien vouloir soumettre une pull request ou ouvrir une issue pour proposer des modifications ou signaler un bug.
