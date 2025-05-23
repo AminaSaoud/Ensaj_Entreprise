@@ -1,4 +1,4 @@
-# SiteEnsajEntreprises
+# SiteENSAJEntreprises
 
 **Site web officiel du club EnsajEntreprises**, conçu pour faciliter la gestion des événements, des membres et des statistiques du club.
 
